@@ -8,7 +8,7 @@ terraform {
   cloud {
     organization = "bemerkenswert"
     workspaces {
-      name = "github-org"
+      name = "jappuccini-github-org"
     }
   }
 }
