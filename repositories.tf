@@ -63,5 +63,5 @@ resource "github_repository" "java-exams" {
   delete_branch_on_merge = true
   has_downloads          = false
   gitignore_template     = "Java"
-  topics                 = ["exercises", "java", "google-java-format"]
+  topics                 = ["exams", "java", "google-java-format"]
 }
