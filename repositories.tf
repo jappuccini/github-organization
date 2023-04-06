@@ -32,8 +32,8 @@ resource "github_repository" "java-docs" {
   topics                 = ["docs", "java", "docusaurus"]
   pages {
     source {
-      branch = "master"
-      path   = "/docs"
+      branch = "main"
+      path   = "/"
     }
   }
 }
