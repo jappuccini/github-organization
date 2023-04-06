@@ -32,7 +32,7 @@ resource "github_repository" "java-docs" {
   topics                 = ["docs", "java", "docusaurus"]
   pages {
     source {
-      branch = "main"
+      branch = "gh-pages"
       path   = "/"
     }
   }
