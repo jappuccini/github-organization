@@ -30,6 +30,12 @@ resource "github_repository" "java-docs" {
   has_downloads          = false
   gitignore_template     = "Node"
   topics                 = ["docs", "java", "docusaurus"]
+  pages {
+    source {
+      branch = "master"
+      path   = "/docs"
+    }
+  }
 }
 
 resource "github_repository" "java-exercises" {
