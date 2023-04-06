@@ -33,7 +33,6 @@ resource "github_repository" "java-docs" {
   pages {
     source {
       branch = "gh-pages"
-      path   = "/"
     }
   }
 }
