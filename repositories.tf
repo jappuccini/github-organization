@@ -64,7 +64,7 @@ resource "github_repository" "java-exams" {
   allow_merge_commit     = false
   allow_squash_merge     = true
   allow_rebase_merge     = false
-  allow_auto_merge       = true
+  allow_auto_merge       = false // private repos need a Github Pro Licence 
   delete_branch_on_merge = true
   has_downloads          = false
   gitignore_template     = "Java"
