@@ -70,3 +70,11 @@ resource "github_repository" "java-exams" {
   gitignore_template     = "Java"
   topics                 = ["exams", "java", "google-java-format"]
 }
+
+resource "github_branch_protection" "wwi_exam_branches" {
+  repository_id = github_repository.java-exams.node_id
+  pattern          = "wwi*"
+  enforce_admins   = true
+  allows_deletions = false
+}
+
