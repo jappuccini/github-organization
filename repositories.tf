@@ -78,11 +78,3 @@ resource "github_repository" "java-exams" {
   topics                 = ["exams", "java", "google-java-format"]
   vulnerability_alerts   = false
 }
-
-resource "github_branch_protection" "wwi_exam_branches" {
-  repository_id    = github_repository.java-exams.name
-  pattern          = "wwi*"
-  enforce_admins   = true
-  allows_deletions = false
-}
-
