@@ -9,10 +9,12 @@ resource "github_repository" "github-organization" {
   allow_squash_merge     = true
   allow_rebase_merge     = false
   allow_auto_merge       = false
+  allow_update_branch    = true
   delete_branch_on_merge = true
   has_downloads          = false
   gitignore_template     = "Terraform"
   topics                 = ["terraform"]
+  vulnerability_alerts   = false
 }
 
 resource "github_repository" "java-docs" {
@@ -26,10 +28,12 @@ resource "github_repository" "java-docs" {
   allow_squash_merge     = true
   allow_rebase_merge     = false
   allow_auto_merge       = true
+  allow_update_branch    = true
   delete_branch_on_merge = true
   has_downloads          = false
   gitignore_template     = "Node"
   topics                 = ["docs", "java", "docusaurus"]
+  vulnerability_alerts   = true
   pages {
     source {
       branch = "gh-pages"
@@ -48,10 +52,12 @@ resource "github_repository" "java-exercises" {
   allow_squash_merge     = true
   allow_rebase_merge     = false
   allow_auto_merge       = true
+  allow_update_branch    = true
   delete_branch_on_merge = true
   has_downloads          = false
   gitignore_template     = "Java"
   topics                 = ["exercises", "java", "google-java-format"]
+  vulnerability_alerts   = false
 }
 
 resource "github_repository" "java-exams" {
@@ -65,10 +71,12 @@ resource "github_repository" "java-exams" {
   allow_squash_merge     = true
   allow_rebase_merge     = false
   allow_auto_merge       = false // private repos need a Github Pro Licence 
+  allow_update_branch    = false
   delete_branch_on_merge = true
   has_downloads          = false
   gitignore_template     = "Java"
   topics                 = ["exams", "java", "google-java-format"]
+  vulnerability_alerts   = false
 }
 
 resource "github_branch_protection" "wwi_exam_branches" {
