@@ -72,7 +72,7 @@ resource "github_repository" "java-exams" {
 }
 
 resource "github_branch_protection" "wwi_exam_branches" {
-  repository_id = github_repository.java-exams.node_id
+  repository_id    = github_repository.java-exams.node_id
   pattern          = "wwi*"
   enforce_admins   = true
   allows_deletions = false
