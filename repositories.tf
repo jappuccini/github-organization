@@ -1,7 +1,7 @@
 resource "github_repository" "github-organization" {
   name                   = "github-organization"
   description            = "The jappuccini github organization represented as code. Everything as Code ❤️"
-  visibility             = "private"
+  visibility             = "public"
   has_issues             = false
   has_projects           = false
   has_wiki               = false
